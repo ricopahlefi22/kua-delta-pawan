@@ -21,6 +21,17 @@ class User extends Authenticatable
         'name',
         'email',
         'password',
+        'photo',
+        'id_number',
+        'phone_number',
+        'birthplace',
+        'birthday',
+        'gender',
+        'address',
+        'citizenship',
+        'status',
+        'employment',
+        'country',
     ];
 
     /**
@@ -41,4 +52,9 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    public function socialAccount()
+    {
+        return $this->hasMany(SocialAccount::class, 'user_id');
+    }
 }
