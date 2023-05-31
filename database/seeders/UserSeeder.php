@@ -29,5 +29,11 @@ class UserSeeder extends Seeder
             'status' => 'Belum Menikah',
             'employment' => 'Pegawai Swasta',
         ]);
+
+        User::factory()->create([
+            'name' => 'Dila Auliza',
+            'email' => 'dilaauliza@gmail.com',
+            'password' => bcrypt('12341234'),
+        ]);
     }
 }

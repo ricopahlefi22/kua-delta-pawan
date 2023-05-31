@@ -62,7 +62,7 @@
                                         <span id="passwordError" class="invalid-feedback"></span>
                                     </div>
                                 </div>
-                                <button id="submit" type="submit" class="btn btn-primary w-100">Masuk</button>
+                                <button id="submit" type="submit" class="btn btn-success w-100">Masuk</button>
                             </form>
                         </div>
                     </div>
