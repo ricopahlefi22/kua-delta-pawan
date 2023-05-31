@@ -19,6 +19,15 @@ class UserSeeder extends Seeder
             'name' => 'Rico Pahlefi',
             'email' => 'ricopahlefi22@gmail.com',
             'password' => bcrypt('MudahDitebak22!'),
+            'id_number' => '6104182201020002',
+            'phone_number' => '089528597031',
+            'birthplace' => 'Ketapang',
+            'birthday' => '2023-01-22',
+            'gender' => 'Laki-Laki',
+            'address' => 'Desa Sungai Awan Kanan',
+            'citizenship' => 'WNI',
+            'status' => 'Belum Menikah',
+            'employment' => 'Pegawai Swasta',
         ]);
     }
 }

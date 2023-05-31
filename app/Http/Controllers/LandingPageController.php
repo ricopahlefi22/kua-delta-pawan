@@ -13,6 +13,6 @@ class LandingPageController extends Controller
         $data['news'] = News::orderBy('created_at')->take(4)->get();
         $data['web'] = WebConfig::first();
 
-        return view('index', $data);
+        return view('landing-page.index', $data);
     }
 }

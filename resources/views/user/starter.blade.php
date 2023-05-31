@@ -1,8 +1,9 @@
 @extends('user.template.base')
 
 @section('content')
-    <div class="page-header">
+    <div class="page-header justify-content-between">
         <h4 class="page-title">Formulir Pendaftaran Nikah</h4>
+        @include('user.template.sections.countdown')
     </div>
     <form id="form" action="starter/store" method="POST">
         @csrf
@@ -11,7 +12,7 @@
             value="{{ empty($married_data->user_id) ? Auth::user()->id : $married_data->user_id }}">
         <div class="card">
             <div class="card-body">
-                <p>Lengkapi formulir berikut untuk keperluan pendaftaran nikah via daring.
+                <p>Tentukan perencanaan pernikahan anda, isi kolom tanggal, waktu dan tempat pelaksanaan akad pernikahan.
                 </p>
                 <div class="mt-4">
                     <div class="row">
@@ -33,7 +34,7 @@
                                 <span id="marriedTimeError" class="invalid-feedback"></span>
                             </div>
                             <div class="mb-2">
-                                <label class="form-label">Apakah Akad Nikah akan dilakukan di luar kantor KUA
+                                <label class="form-label">Apakah Akad Nikah akan dilakukan di kantor KUA
                                     Delta Pawan? <span id="marriedLocationOptionError" class="text-danger"></span></label>
                                 <div class="row">
                                     <div class="col-3">
@@ -78,7 +79,7 @@
                 $("#wrapperLocation").html(
                     '<div class="mb-2">\
                         <label for="location" class="form-label">Tempat Lokasi Pernikahan (Alamat)</label>\
-                        <input id="location" type="text" class="form-control" name="location" value="{{ empty($married_data->married_address) ? null : $married_data->married_address }}">\
+                        <input id="location" type="text" class="form-control" name="location" placeholder="Nama Jalan, Desa, Kecamatan" value="{{ empty($married_data->married_address) ? null : $married_data->married_address }}">\
                         <span id="locationError" class="invalid-feedback"></span>\
                     </div>'
                 );
@@ -97,7 +98,7 @@
                     $("#wrapperLocation").html(
                         '<div class="mb-2">\
                             <label for="location" class="form-label">Tempat Lokasi Pernikahan (Alamat)</label>\
-                            <input id="location" type="text" class="form-control" name="location">\
+                            <input id="location" type="text" class="form-control" name="location" placeholder="Nama Jalan, Desa, Kecamatan">\
                             <span id="locationError" class="invalid-feedback"></span>\
                         </div>'
                     );
@@ -118,6 +119,7 @@
                         $("#date").removeClass("is-invalid");
                         $("#time").removeClass("is-invalid");
                         $("#location").removeClass("is-invalid");
+                        $("#marriedLocationOptionError").html('');
 
                         $("#submit").html(
                             '<div class="text-center"><div class="spinner-border spinner-border-sm text-white"></div></div>'

@@ -11,7 +11,8 @@
     <!-- Favicon -->
     <link rel="shortcut icon" href="{{ asset('favicon.png') }}">
 
-    <!-- page css -->
+    <!-- Sweet Alert 2 -->
+    <link href="{{ asset('plugins/sweetalert2-theme-bootstrap-4/bootstrap-4.min.css') }}" rel="stylesheet">
 
     <!-- Core css -->
     <link href="{{ asset('assets/css/app.min.css') }}" rel="stylesheet">
@@ -28,7 +29,9 @@
             <!-- Content START -->
             <div class="content container">
                 <div class="main">
-                    @include('user.template.sections.progress-bar')
+                    @if (Route::current()->uri != 'u/profile' && Route::current()->uri != 'u/notification')
+                        @include('user.template.sections.progress-bar')
+                    @endif
 
                     @yield('content')
                 </div>
@@ -46,6 +49,10 @@
 
     <!-- page js -->
     <script src="{{ asset('plugins/jquery/jquery.min.js') }}"></script>
+    <script src="{{ asset('plugins/inputmask/jquery.inputmask.min.js') }}"></script>
+
+    <!-- Sweet Alert 2 -->
+    <script src="{{ asset('plugins/sweetalert2/sweetalert2.min.js') }}"></script>
 
     <!-- Core JS -->
     <script src="{{ asset('assets/js/app.min.js') }}"></script>

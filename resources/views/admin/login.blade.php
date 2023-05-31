@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>Login | AdminKUA</title>
+    <title>Login | Admin - Kantor Urusan Agama</title>
 
     <!-- Favicons -->
     <link href="{{ asset('favicon.png') }}" rel="icon">
@@ -31,8 +31,7 @@
                     <div class="d-flex justify-content-between">
                         <span class="text-white">© 2023 Kayong Developer</span>
                         <div>
-                            <a href="#" class="text-white text-link me-3">Ketentuan Layanan</a>
-                            <a href="#" class="text-white text-link">Kebijakan Privasi</a>
+                            <a href="#" class="text-white text-link">{{ env('APP_NAME') }}</a>
                         </div>
                     </div>
                 </div>

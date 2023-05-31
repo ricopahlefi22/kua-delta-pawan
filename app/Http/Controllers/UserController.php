@@ -16,9 +16,14 @@ class UserController extends Controller
             return DataTables::of(User::all())
                 ->addIndexColumn()
                 ->addColumn('action', function (User $user) {
-                    $btn = '<button title="Sunting Data" data-id="' . $user->id . '"  class="btn btn-sm btn-warning edit"><i class="feather icon-edit"></i></button> ';
-                    $btn .= '<button title="Hapus Data" data-id="' . $user->id . '" class="btn btn-sm btn-danger delete"><i class="feather icon-trash-2"></i></button>';
-                    return '<div class="btn-group">' . $btn . '</div>';
+                    $btn = '<button data-id="' . $user->id . '"  class="dropdown-item edit"><i class="feather icon-edit"></i> Sunting</button> ';
+                    $btn .= '<button data-id="' . $user->id . '" class="dropdown-item delete"><i class="feather icon-trash-2"></i> Hapus</button>';
+                    return '<button type="button" class="btn dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false">
+                                <i class="la font-size-lg la-ellipsis-v"></i>
+                            </button>
+                            <ul class="dropdown-menu">
+                                '.$btn.'
+                            </ul>';
                 })
                 ->rawColumns(['action'])
                 ->make(true);

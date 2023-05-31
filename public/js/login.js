@@ -29,7 +29,7 @@ $(document).ready(function() {
                         title: response.status,
                         text: response.message,
                         confirmButtonText: "Lanjut",
-                        confirmButtonColor: "#007BFF",
+                        confirmButtonColor: "#00c569",
                         backdrop: true,
                         allowOutsideClick: () => {
                             console.log("Klik Tombol Lanjut");

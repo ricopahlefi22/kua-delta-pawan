@@ -5,6 +5,13 @@
             return 'router-link-active';
         }
     }
+
+    function routeMenuOpen()
+    {
+        if (Route::current()->uri == 'registrations' || Route::current()->uri == 'weddings') {
+            return 'display: block;';
+        }
+    }
 @endphp
 <div class="side-nav vertical-menu nav-menu-light scrollable">
     <div class="nav-logo">
@@ -23,25 +30,22 @@
             </a>
         </li>
         <li class="nav-group-title">Manajemen Pernikahan</li>
-        <li class="nav-menu-item {{ routeActive('weddings') }}">
-            <a href="weddings">
+        <li class="nav-submenu">
+            <a class="nav-submenu-title">
                 <i class="feather icon-heart-on"></i>
-                <span class="nav-menu-item-title">Data Pernikahan</span>
+                <span>Data Pernikahan</span>
+                <i class="nav-submenu-arrow"></i>
             </a>
-        </li>
-        <li class="nav-menu-item {{ routeActive('schedule') }}">
-            <a href="schedule">
-                <i class="feather icon-calendar"></i>
-                <span class="nav-menu-item-title">Jadwal Pernikahan</span>
-            </a>
+            <ul class="nav-menu menu-collapse" style="{{ routeMenuOpen() }}">
+                <li class="nav-menu-item {{ routeActive('registration') }}">
+                    <a href="registrations">Pendaftaran</a>
+                </li>
+                <li class="nav-menu-item {{ routeActive('weddings') }}">
+                    <a href="weddings">Pernikahan</a>
+                </li>
+            </ul>
         </li>
         <li class="nav-group-title">Manajemen Website</li>
-        <li class="nav-menu-item {{ routeActive('news') }}">
-            <a href="news">
-                <i class="la la-newspaper"></i>
-                <span class="nav-menu-item-title">Data Berita</span>
-            </a>
-        </li>
         <li class="nav-menu-item {{ routeActive('galleries') }}">
             <a href="galleries">
                 <i class="feather icon-image"></i>

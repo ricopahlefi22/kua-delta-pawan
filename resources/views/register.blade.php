@@ -27,26 +27,23 @@
                             <div class="m-2">
                                 <div class="d-flex justify-content-center mt-3">
                                     <div class="text-center logo">
-                                        <img alt="logo" class="img-fluid" src="{{ asset('assets/images/logo/logo.png') }}"
-                                            style="height: 70px;">
+                                        <img alt="logo" class="mb-3" src="{{ asset('assets/images/logo/logo.png') }}"
+                                            style="height: 50px;">
                                     </div>
                                 </div>
-                                <div class="text-center mt-3">
-                                    <p class="text-muted">Buat akunmu untuk melanjutkan pendaftaran nikah.
-                                    </p>
-                                </div>
-                                <form id="form" action="login" method="POST">
+                                <form id="form" action="register" method="POST">
+                                    @csrf
                                     <div class="form-group mb-2">
                                         <label class="form-label">Nama</label>
-                                        <input id="email" type="text" name="email" class="form-control" />
-                                        <span id="emailError" class="invalid-feedback"></span>
+                                        <input id="name" type="text" name="name" class="form-control" />
+                                        <span id="nameError" class="invalid-feedback"></span>
                                     </div>
-                                    <div class="form-group mb-3">
+                                    <div class="form-group mb-2">
                                         <label class="form-label">Email</label>
                                         <input id="email" type="text" name="email" class="form-control" />
                                         <span id="emailError" class="invalid-feedback"></span>
                                     </div>
-                                    <div class="mb-3">
+                                    <div class="mb-2">
                                         <label class="form-label d-flex justify-content-between">
                                             <span>Kata Sandi</span>
                                         </label>
@@ -55,10 +52,19 @@
                                             <span id="passwordError" class="invalid-feedback"></span>
                                         </div>
                                     </div>
-                                    <button id="submit" type="submit" class="btn btn-primary w-100">Masuk</button>
+                                    <div class="mb-2">
+                                        <label class="form-label d-flex justify-content-between">
+                                            <span>Konfirmasi Kata Sandi</span>
+                                        </label>
+                                        <div class="form-group input-affix flex-column">
+                                            <input id="passwordConfirmation" name="password_confirmation" class="form-control" type="password">
+                                            <span id="passwordConfirmationError" class="invalid-feedback"></span>
+                                        </div>
+                                    </div>
+                                    <button id="submit" type="submit" class="btn btn-success w-100">Daftar</button>
                                 </form>
                                 <div class="text-center mt-4">
-                                    <p class="text-muted">Sudah punya akun? <a href="register">Daftar dulu</a></p>
+                                    <p class="text-muted">Sudah punya akun? <a href="login">Masuk disini</a></p>
                                 </div>
                             </div>
                         </div>
@@ -77,7 +83,7 @@
     <!-- Core JS -->
     <script src="{{ asset('assets/js/app.min.js') }}"></script>
     <!-- Login Script -->
-    <script src="{{ asset('js/login.js') }}"></script>
+    <script src="{{ asset('js/register.js') }}"></script>
 </body>
 
 </html>

@@ -9,11 +9,22 @@ class Wedding extends Model
 {
     use HasFactory;
 
+    protected $dates = ['date'];
+
     protected $fillable = [
         'user_id',
         'date',
         'time',
         'married_on_office',
         'married_address',
+        'status',
     ];
+
+    public function user(){
+        return $this->belongsTo(User::class, 'user_id');
+    }
+
+    public function partner(){
+        return $this->belongsTo(Partner::class, 'partner_id');
+    }
 }

@@ -15,10 +15,13 @@ return new class extends Migration
             $table->id();
             $table->foreignId('user_id')->nullable();
             $table->foreign('user_id')->references('id')->on('users');
+            $table->foreignId('partner_id')->nullable();
+            $table->foreign('partner_id')->references('id')->on('partners');
             $table->date('date');
             $table->time('time');
             $table->boolean('married_on_office');
             $table->string('married_address')->nullable();
+            $table->string('status');
             $table->timestamps();
         });
     }

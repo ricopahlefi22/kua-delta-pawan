@@ -17,8 +17,8 @@ class NewsController extends Controller
             return DataTables::of(News::all())
                 ->addIndexColumn()
                 ->addColumn('action', function (News $recepient) {
-                    $btn = '<button title="Sunting Data" data-id="' . $recepient->id . '"  class="btn btn-sm btn-warning edit"><i class="fa fa-edit"></i></button> ';
-                    $btn .= '<button title="Hapus Data" data-id="' . $recepient->id . '" class="btn btn-sm btn-danger delete"><i class="fa fa-trash"></i></button>';
+                    $btn = '<button title="Sunting Data" data-id="' . $recepient->id . '"  class="btn btn-sm btn-warning edit"><i class="feather icon-edit"></i></button> ';
+                    $btn .= '<button title="Hapus Data" data-id="' . $recepient->id . '" class="btn btn-sm btn-danger delete"><i class="feather icon-trash-2"></i></button>';
                     return '<div class="btn-group">' . $btn . '</div>';
                 })
                 ->rawColumns(['action'])

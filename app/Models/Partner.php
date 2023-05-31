@@ -13,6 +13,7 @@ class Partner extends Model
         'user_id',
         'name',
         'photo',
+        'ktp',
         'id_number',
         'phone_number',
         'birthplace',

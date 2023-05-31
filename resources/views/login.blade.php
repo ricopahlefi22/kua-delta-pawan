@@ -52,7 +52,7 @@
                                             <span id="passwordError" class="invalid-feedback"></span>
                                         </div>
                                     </div>
-                                    <button id="submit" type="submit" class="btn btn-primary w-100">Masuk</button>
+                                    <button id="submit" type="submit" class="btn btn-success w-100">Masuk</button>
                                 </form>
                                 <div class="divider">
                                     <span class="divider-text text-muted">atau lebih mudah menggunakan</span>
@@ -72,7 +72,7 @@
                                     </div>
                                 </div>
                                 <div class="text-center mt-4">
-                                    <p class="text-muted">Belum punya akun? <a class="text-muted">Daftar dulu</a></p>
+                                    <p class="text-muted">Belum punya akun? <a href="register">Daftar dulu</a></p>
                                 </div>
                             </div>
                         </div>
