@@ -20,11 +20,11 @@
 <body>
     <div class="auth-full-height">
         <div class="row m-0">
-            <div class="col p-0 auth-full-height" style="background-image: url('assets/images/others/bg-1.jpg');">
+            <div class="col p-0 auth-full-height" style="background-image: url('assets/images/others/bg-login.png');background-size:cover;">
                 <div class="d-flex justify-content-between flex-column h-100 px-5 py-3">
                     <div></div>
                     <div class="w-100 ">
-                        <h1 class="display-4 text-white mb-4">Halo Admin!</h1>
+                        <h1 class="display-4 text-white mb-4"><b>Halo Admin!</b></h1>
                         <p class="text-white lead" style="max-width: 630px;">Demi menjaga keamanan, kami perlu
                             memastikan identitasmu melalui email dan kata sandi yang telah terdaftar.</p>
                     </div>
