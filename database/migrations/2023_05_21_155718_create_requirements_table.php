@@ -11,10 +11,13 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('requirements', function (Blueprint $table) {
+        // Schema::create('requirements', function (Blueprint $table) {
+        Schema::create('berkas', function (Blueprint $table) {
             $table->id();
             $table->foreignId('user_id')->nullable();
-            $table->foreign('user_id')->references('id')->on('users');
+            $table->foreign('user_id')->references('id')->on('user');
+            $table->foreignId('wedding_id')->nullable();
+            $table->foreign('wedding_id')->references('id')->on('pernikahan');
             $table->string('n1')->nullable();
             $table->string('n2')->nullable();
             $table->string('n3')->nullable();

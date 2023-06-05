@@ -9,6 +9,8 @@ class SocialAccount extends Model
 {
     use HasFactory;
 
+    protected $table = 'sosial_media';
+
     protected $fillable = [
         'user_id',
         'provider_id',

@@ -18,12 +18,21 @@ class AdminSeeder extends Seeder
             'name' => 'Rico Pahlefi',
             'email' => 'ricopahlefi22@gmail.com',
             'password' => bcrypt('MudahDitebak22!'),
+            'level' => 'super',
         ]);
 
         Admin::factory()->create([
             'name' => 'Dila Auliza',
             'email' => 'dilaauliza@gmail.com',
             'password' => bcrypt('12341234'),
+            'level' => 'super',
+        ]);
+
+        Admin::factory()->create([
+            'name' => 'Admin KUA',
+            'email' => 'admin@gmail.com',
+            'password' => bcrypt('12341234'),
+            'level' => 'admin',
         ]);
     }
 }

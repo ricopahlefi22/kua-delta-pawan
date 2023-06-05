@@ -23,13 +23,8 @@
             <div class="col p-0 auth-full-height" style="background-image: url('assets/images/others/bg-login.png');background-size:cover;">
                 <div class="d-flex justify-content-between flex-column h-100 px-5 py-3">
                     <div></div>
-                    <div class="w-100 ">
-                        <h1 class="display-4 text-white mb-4"><b>Halo Admin!</b></h1>
-                        <p class="text-white lead" style="max-width: 630px;">Demi menjaga keamanan, kami perlu
-                            memastikan identitasmu melalui email dan kata sandi yang telah terdaftar.</p>
-                    </div>
                     <div class="d-flex justify-content-between">
-                        <span class="text-white">© 2023 Kayong Developer</span>
+                        <span class="text-white">Hak Cipta © 2023. <a href="https://kayong-developer.com" class="text-white">Kayong Developer</a></span>
                         <div>
                             <a href="#" class="text-white text-link">{{ env('APP_NAME') }}</a>
                         </div>
@@ -55,7 +50,7 @@
                                 <div class="mb-3">
                                     <label class="form-label d-flex justify-content-between">
                                         <span>Kata Sandi</span>
-                                        <a href="#" class="text-primary text-muted font">Lupa kata sandi?</a>
+                                        {{-- <a href="#" class="text-primary text-muted font">Lupa kata sandi?</a> --}}
                                     </label>
                                     <div class="form-group input-affix flex-column">
                                         <input id="password" name="password" class="form-control" type="password">

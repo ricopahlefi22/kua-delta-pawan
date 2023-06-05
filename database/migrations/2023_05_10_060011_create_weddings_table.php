@@ -11,12 +11,11 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('weddings', function (Blueprint $table) {
+        // Schema::create('weddings', function (Blueprint $table) {
+        Schema::create('pernikahan', function (Blueprint $table) {
             $table->id();
             $table->foreignId('user_id')->nullable();
-            $table->foreign('user_id')->references('id')->on('users');
-            $table->foreignId('partner_id')->nullable();
-            $table->foreign('partner_id')->references('id')->on('partners');
+            $table->foreign('user_id')->references('id')->on('user');
             $table->date('date');
             $table->time('time');
             $table->boolean('married_on_office');

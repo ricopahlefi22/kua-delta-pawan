@@ -9,11 +9,14 @@ class Partner extends Model
 {
     use HasFactory;
 
+    protected $table = 'pasangan';
+
     protected $fillable = [
         'user_id',
-        'name',
+        'wedding_id',
         'photo',
         'ktp',
+        'name',
         'id_number',
         'phone_number',
         'birthplace',

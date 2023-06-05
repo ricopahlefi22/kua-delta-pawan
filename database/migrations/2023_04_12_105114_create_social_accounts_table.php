@@ -11,10 +11,11 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('social_accounts', function (Blueprint $table) {
+        // Schema::create('social_accounts', function (Blueprint $table) {
+        Schema::create('sosial_media', function (Blueprint $table) {
             $table->id();
             $table->foreignId('user_id')->nullable();
-            $table->foreign('user_id')->references('id')->on('users');
+            $table->foreign('user_id')->references('id')->on('user');
             $table->string('provider_id')->unique();
             $table->string('provider_name');
             $table->timestamps();

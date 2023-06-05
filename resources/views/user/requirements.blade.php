@@ -23,7 +23,7 @@
                                 <div class="row">
                                     @if (empty($req_data->n1))
                                         <div class="col-12">
-                                            <input id="n1" type="file" class="form-control" name="n1" accept="application/pdf">
+                                            <input id="n1" type="file" class="form-control" name="n1" accept="application/pdf, image/png, image/jpg, image/jpeg">
                                         </div>
                                     @else
                                         <div class="btn-group">
@@ -32,7 +32,7 @@
                                             </a>
                                             <div class="upload upload-text">
                                                 <label for="n1" class="btn btn-secondary w-100">Ganti File</label>
-                                                <input id="n1" type="file" name="n1" class="upload-input" accept="application/pdf">
+                                                <input id="n1" type="file" name="n1" class="upload-input" accept="application/pdf, image/png, image/jpg, image/jpeg">
                                             </div>
                                         </div>
                                     @endif
@@ -47,7 +47,7 @@
                                 <div class="row">
                                     @if (empty($req_data->n2))
                                         <div class="col-12">
-                                            <input id="n2" type="file" class="form-control" name="n2" accept="application/pdf">
+                                            <input id="n2" type="file" class="form-control" name="n2" accept="application/pdf, image/png, image/jpg, image/jpeg">
                                         </div>
                                     @else
                                         <div class="btn-group">
@@ -56,7 +56,7 @@
                                             </a>
                                             <div class="upload upload-text">
                                                 <label for="n2" class="btn btn-secondary">Ganti File</label>
-                                                <input id="n2" type="file" name="n2" class="upload-input" accept="application/pdf">
+                                                <input id="n2" type="file" name="n2" class="upload-input" accept="application/pdf, image/png, image/jpg, image/jpeg">
                                             </div>
                                         </div>
                                     @endif
@@ -72,7 +72,7 @@
                                     <div class="row">
                                         @if (empty($req_data->bukti_pembayaran))
                                             <div class="col-12">
-                                                <input id="buktiPembayaran" type="file" class="form-control" name="bukti_pembayaran" accept="application/pdf">
+                                                <input id="buktiPembayaran" type="file" class="form-control" name="bukti_pembayaran" accept="application/pdf, image/png, image/jpg, image/jpeg">
                                             </div>
                                         @else
                                             <div class="btn-group">
@@ -81,7 +81,7 @@
                                                 </a>
                                                 <div class="upload upload-text">
                                                     <label for="buktiPembayaran" class="btn btn-secondary">Ganti File </label>
-                                                    <input id="buktiPembayaran" type="file" name="bukti_pembayaran" class="upload-input" accept="application/pdf">
+                                                    <input id="buktiPembayaran" type="file" name="bukti_pembayaran" class="upload-input" accept="application/pdf, image/png, image/jpg, image/jpeg">
                                                 </div>
                                             </div>
                                         @endif
@@ -99,7 +99,7 @@
                                 <div class="row">
                                     @if (empty($req_data->n3))
                                         <div class="col-12">
-                                            <input id="n3" type="file" class="form-control" name="n3" accept="application/pdf">
+                                            <input id="n3" type="file" class="form-control" name="n3" accept="application/pdf, image/png, image/jpg, image/jpeg">
                                         </div>
                                     @else
                                         <div class="btn-group">
@@ -108,7 +108,7 @@
                                             </a>
                                             <div class="upload upload-text">
                                                 <label for="n3" class="btn btn-secondary">Ganti File</label>
-                                                <input id="n3" type="file" name="n3" class="upload-input" accept="application/pdf">
+                                                <input id="n3" type="file" name="n3" class="upload-input" accept="application/pdf, image/png, image/jpg, image/jpeg">
                                             </div>
                                         </div>
                                     @endif
@@ -123,7 +123,7 @@
                                 <div class="row">
                                     @if (empty($req_data->n4))
                                         <div class="col-12">
-                                            <input id="n4" type="file" class="form-control" name="n4" accept="application/pdf">
+                                            <input id="n4" type="file" class="form-control" name="n4" accept="application/pdf, image/png, image/jpg, image/jpeg">
                                         </div>
                                     @else
                                         <div class="btn-group">
@@ -132,7 +132,7 @@
                                             </a>
                                             <div class="upload upload-text">
                                                 <label for="n4" class="btn btn-secondary">Ganti File</label>
-                                                <input id="n4" type="file" name="n4" class="upload-input" accept="application/pdf">
+                                                <input id="n4" type="file" name="n4" class="upload-input" accept="application/pdf, image/png, image/jpg, image/jpeg">
                                             </div>
                                         </div>
                                     @endif
@@ -156,7 +156,7 @@
                                     <div class="row">
                                         @if (empty($req_data->surat_despensasi))
                                             <div class="col-12">
-                                                <input id="suratDespensasi" type="file" class="form-control" name="surat_despensasi" accept="application/pdf">
+                                                <input id="suratDespensasi" type="file" class="form-control" name="surat_despensasi" accept="application/pdf, image/png, image/jpg, image/jpeg">
                                             </div>
                                         @else
                                             <div class="btn-group">
@@ -165,7 +165,7 @@
                                                 </a>
                                                 <div class="upload upload-text">
                                                     <label for="suratDespensasi" class="btn btn-secondary">Ganti File</label>
-                                                    <input id="suratDespensasi" type="file" name="surat_despensasi" class="upload-input" accept="application/pdf">
+                                                    <input id="suratDespensasi" type="file" name="surat_despensasi" class="upload-input" accept="application/pdf, image/png, image/jpg, image/jpeg">
                                                 </div>
                                             </div>
                                         @endif
@@ -194,7 +194,7 @@
                                 <div class="row">
                                     @if (empty($req_data->u_kk))
                                         <div class="col-12">
-                                            <input id="uKK" type="file" class="form-control" name="u_kk" accept="application/pdf">
+                                            <input id="uKK" type="file" class="form-control" name="u_kk" accept="application/pdf, image/png, image/jpg, image/jpeg">
                                         </div>
                                     @else
                                         <div class="btn-group">
@@ -203,7 +203,7 @@
                                             </a>
                                             <div class="upload upload-text">
                                                 <label for="uKK" class="btn btn-secondary">Ganti File</label>
-                                                <input id="uKK" type="file" name="u_kk" class="upload-input" accept="application/pdf">
+                                                <input id="uKK" type="file" name="u_kk" class="upload-input" accept="application/pdf, image/png, image/jpg, image/jpeg">
                                             </div>
                                         </div>
                                     @endif
@@ -218,7 +218,7 @@
                                 <div class="row">
                                     @if (empty($req_data->u_surat_kesehatan))
                                         <div class="col-12">
-                                            <input id="uSuratKesehatan" type="file" class="form-control" name="u_surat_kesehatan" accept="application/pdf">
+                                            <input id="uSuratKesehatan" type="file" class="form-control" name="u_surat_kesehatan" accept="application/pdf, image/png, image/jpg, image/jpeg">
                                         </div>
                                     @else
                                         <div class="btn-group">
@@ -227,7 +227,7 @@
                                             </a>
                                             <div class="upload upload-text">
                                                 <label for="uSuratKesehatan" class="btn btn-secondary">Ganti File</label>
-                                                <input id="uSuratKesehatan" type="file" name="u_surat_kesehatan" class="upload-input" accept="application/pdf">
+                                                <input id="uSuratKesehatan" type="file" name="u_surat_kesehatan" class="upload-input" accept="application/pdf, image/png, image/jpg, image/jpeg">
                                             </div>
                                         </div>
                                     @endif
@@ -243,7 +243,7 @@
                                     <div class="row">
                                         @if (empty($req_data->u_surat_izin_komandan))
                                             <div class="col-12">
-                                                <input id="uSuratIzinKomandan" type="file" class="form-control" name="u_surat_izin_komandan" accept="application/pdf">
+                                                <input id="uSuratIzinKomandan" type="file" class="form-control" name="u_surat_izin_komandan" accept="application/pdf, image/png, image/jpg, image/jpeg">
                                             </div>
                                         @else
                                             <div class="btn-group">
@@ -252,7 +252,7 @@
                                                 </a>
                                                 <div class="upload upload-text">
                                                     <label for="uSuratIzinKomandan" class="btn btn-secondary">Ganti File</label>
-                                                    <input id="uSuratIzinKomandan" type="file" name="u_surat_izin_komandan" class="upload-input" accept="application/pdf">
+                                                    <input id="uSuratIzinKomandan" type="file" name="u_surat_izin_komandan" class="upload-input" accept="application/pdf, image/png, image/jpg, image/jpeg">
                                                 </div>
                                             </div>
                                         @endif
@@ -269,7 +269,7 @@
                                     <div class="row">
                                         @if (empty($req_data->u_akta_cerai_kematian))
                                             <div class="col-12">
-                                                <input id="uAktaCeraiKematian" type="file" class="form-control" name="u_akta_cerai_kematian" accept="application/pdf">
+                                                <input id="uAktaCeraiKematian" type="file" class="form-control" name="u_akta_cerai_kematian" accept="application/pdf, image/png, image/jpg, image/jpeg">
                                             </div>
                                         @else
                                             <div class="btn-group">
@@ -278,7 +278,7 @@
                                                 </a>
                                                 <div class="upload upload-text">
                                                     <label for="uAktaCeraiKematian" class="btn btn-secondary">Ganti File</label>
-                                                    <input id="uAktaCeraiKematian" type="file" name="u_akta_cerai_kematian" class="upload-input" accept="application/pdf">
+                                                    <input id="uAktaCeraiKematian" type="file" name="u_akta_cerai_kematian" class="upload-input" accept="application/pdf, image/png, image/jpg, image/jpeg">
                                                 </div>
                                             </div>
                                         @endif
@@ -295,7 +295,7 @@
                                     <div class="row">
                                         @if (empty($req_data->u_surat_izin_kedutaan))
                                             <div class="col-12">
-                                                <input id="uSuratIzinKedutaan" type="file" class="form-control" name="u_surat_izin_kedutaan" accept="application/pdf">
+                                                <input id="uSuratIzinKedutaan" type="file" class="form-control" name="u_surat_izin_kedutaan" accept="application/pdf, image/png, image/jpg, image/jpeg">
                                             </div>
                                         @else
                                             <div class="btn-group">
@@ -304,7 +304,7 @@
                                                 </a>
                                                 <div class="upload upload-text">
                                                     <label for="uSuratIzinKedutaan" class="btn btn-secondary">Ganti File</label>
-                                                    <input id="uSuratIzinKedutaan" type="file" name="u_surat_izin_kedutaan" class="upload-input" accept="application/pdf">
+                                                    <input id="uSuratIzinKedutaan" type="file" name="u_surat_izin_kedutaan" class="upload-input" accept="application/pdf, image/png, image/jpg, image/jpeg">
                                                 </div>
                                             </div>
                                         @endif
@@ -319,7 +319,7 @@
                                     <div class="row">
                                         @if (empty($req_data->u_paspor))
                                             <div class="col-12">
-                                                <input id="uPaspor" type="file" class="form-control" name="u_paspor" accept="application/pdf">
+                                                <input id="uPaspor" type="file" class="form-control" name="u_paspor" accept="application/pdf, image/png, image/jpg, image/jpeg">
                                             </div>
                                         @else
                                             <div class="btn-group">
@@ -328,7 +328,7 @@
                                                 </a>
                                                 <div class="upload upload-text">
                                                     <label for="uPaspor" class="btn btn-secondary">Ganti File</label>
-                                                    <input id="uPaspor" type="file" name="u_paspor" class="upload-input" accept="application/pdf">
+                                                    <input id="uPaspor" type="file" name="u_paspor" class="upload-input" accept="application/pdf, image/png, image/jpg, image/jpeg">
                                                 </div>
                                             </div>
                                         @endif
@@ -356,7 +356,7 @@
                                 <div class="row">
                                     @if (empty($req_data->p_kk))
                                         <div class="col-12">
-                                            <input id="pKK" type="file" class="form-control" name="p_kk" accept="application/pdf">
+                                            <input id="pKK" type="file" class="form-control" name="p_kk" accept="application/pdf, image/png, image/jpg, image/jpeg">
                                         </div>
                                     @else
                                         <div class="btn-group">
@@ -365,7 +365,7 @@
                                             </a>
                                             <div class="upload upload-text">
                                                 <label for="pKK" class="btn btn-secondary">Ganti File</label>
-                                                <input id="pKK" type="file" name="p_kk" class="upload-input" accept="application/pdf">
+                                                <input id="pKK" type="file" name="p_kk" class="upload-input" accept="application/pdf, image/png, image/jpg, image/jpeg">
                                             </div>
                                         </div>
                                     @endif
@@ -380,7 +380,7 @@
                                 <div class="row">
                                     @if (empty($req_data->p_surat_kesehatan))
                                         <div class="col-12">
-                                            <input id="pSuratKesehatan" type="file" class="form-control" name="p_surat_kesehatan" accept="application/pdf">
+                                            <input id="pSuratKesehatan" type="file" class="form-control" name="p_surat_kesehatan" accept="application/pdf, image/png, image/jpg, image/jpeg">
                                         </div>
                                     @else
                                         <div class="btn-group">
@@ -389,7 +389,7 @@
                                             </a>
                                             <div class="upload upload-text">
                                                 <label for="pSuratKesehatan" class="btn btn-secondary">Ganti File</label>
-                                                <input id="pSuratKesehatan" type="file" name="p_surat_kesehatan" class="upload-input" accept="application/pdf">
+                                                <input id="pSuratKesehatan" type="file" name="p_surat_kesehatan" class="upload-input" accept="application/pdf, image/png, image/jpg, image/jpeg">
                                             </div>
                                         </div>
                                     @endif
@@ -405,7 +405,7 @@
                                     <div class="row">
                                         @if (empty($req_data->p_surat_izin_komandan))
                                             <div class="col-12">
-                                                <input id="pSuratIzinKomandan" type="file" class="form-control" name="p_surat_izin_komandan" accept="application/pdf">
+                                                <input id="pSuratIzinKomandan" type="file" class="form-control" name="p_surat_izin_komandan" accept="application/pdf, image/png, image/jpg, image/jpeg">
                                             </div>
                                         @else
                                             <div class="btn-group">
@@ -414,7 +414,7 @@
                                                 </a>
                                                 <div class="upload upload-text">
                                                     <label for="pSuratIzinKomandan" class="btn btn-secondary">Ganti File</label>
-                                                    <input id="pSuratIzinKomandan" type="file" name="p_surat_izin_komandan" class="upload-input" accept="application/pdf">
+                                                    <input id="pSuratIzinKomandan" type="file" name="p_surat_izin_komandan" class="upload-input" accept="application/pdf, image/png, image/jpg, image/jpeg">
                                                 </div>
                                             </div>
                                         @endif
@@ -431,7 +431,7 @@
                                     <div class="row">
                                         @if (empty($req_data->p_akta_cerai_kematian))
                                             <div class="col-12">
-                                                <input id="pAktaCeraiKematian" type="file" class="form-control" name="p_akta_cerai_kematian" accept="application/pdf">
+                                                <input id="pAktaCeraiKematian" type="file" class="form-control" name="p_akta_cerai_kematian" accept="application/pdf, image/png, image/jpg, image/jpeg">
                                             </div>
                                         @else
                                             <div class="btn-group">
@@ -440,7 +440,7 @@
                                                 </a>
                                                 <div class="upload upload-text">
                                                     <label for="pAktaCeraiKematian" class="btn btn-secondary">Ganti File</label>
-                                                    <input id="pAktaCeraiKematian" type="file" name="p_akta_cerai_kematian" class="upload-input" accept="application/pdf">
+                                                    <input id="pAktaCeraiKematian" type="file" name="p_akta_cerai_kematian" class="upload-input" accept="application/pdf, image/png, image/jpg, image/jpeg">
                                                 </div>
                                             </div>
                                         @endif
@@ -457,7 +457,7 @@
                                     <div class="row">
                                         @if (empty($req_data->p_surat_izin_kedutaan))
                                             <div class="col-12">
-                                                <input id="pSuratIzinKedutaan" type="file" class="form-control" name="p_surat_izin_kedutaan" accept="application/pdf">
+                                                <input id="pSuratIzinKedutaan" type="file" class="form-control" name="p_surat_izin_kedutaan" accept="application/pdf, image/png, image/jpg, image/jpeg">
                                             </div>
                                         @else
                                             <div class="btn-group">
@@ -466,7 +466,7 @@
                                                 </a>
                                                 <div class="upload upload-text">
                                                     <label for="pSuratIzinKedutaan" class="btn btn-secondary">Ganti File</label>
-                                                    <input id="pSuratIzinKedutaan" type="file" name="p_surat_izin_kedutaan" class="upload-input" accept="application/pdf">
+                                                    <input id="pSuratIzinKedutaan" type="file" name="p_surat_izin_kedutaan" class="upload-input" accept="application/pdf, image/png, image/jpg, image/jpeg">
                                                 </div>
                                             </div>
                                         @endif
@@ -481,7 +481,7 @@
                                     <div class="row">
                                         @if (empty($req_data->p_paspor))
                                             <div class="col-12">
-                                                <input id="pPaspor" type="file" class="form-control" name="p_paspor" accept="application/pdf">
+                                                <input id="pPaspor" type="file" class="form-control" name="p_paspor" accept="application/pdf, image/png, image/jpg, image/jpeg">
                                             </div>
                                         @else
                                             <div class="btn-group">
@@ -490,7 +490,7 @@
                                                 </a>
                                                 <div class="upload upload-text">
                                                     <label for="pPaspor" class="btn btn-secondary">Ganti File</label>
-                                                    <input id="pPaspor" type="file" name="p_paspor" class="upload-input" accept="application/pdf">
+                                                    <input id="pPaspor" type="file" name="p_paspor" class="upload-input" accept="application/pdf, image/png, image/jpg, image/jpeg">
                                                 </div>
                                             </div>
                                         @endif

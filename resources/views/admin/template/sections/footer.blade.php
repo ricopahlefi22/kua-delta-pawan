@@ -1,9 +1,8 @@
 <div class="footer">
     <div class="footer-content">
-        <p class="mb-0">Hak Cipta © 2023 Kayong Developer.</p>
+        <p class="mb-0">Hak Cipta © 2023 <a href="https://kayong-developer.com">Kayong Developer.</a></p>
         <span>
-            <a href="" class="text-gray me-3">Ketentuan Layanan</a>
-            <a href="" class="text-gray">Kebijakan Privasi</a>
+            <p class="text-gray me-3">{{ env('APP_NAME') }}</p>
         </span>
     </div>
 </div>

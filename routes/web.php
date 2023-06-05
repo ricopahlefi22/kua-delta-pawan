@@ -63,6 +63,8 @@ Route::group(['domain' => 'admin.' . env('DOMAIN')], function () {
 
         Route::prefix('registrations')->controller(WeddingRegistrationController::class)->group(function () {
             Route::get('/', 'index');
+            Route::get('verification/{id}', 'verification');
+            Route::post('verification', 'verify');
             Route::post('check', 'check');
             Route::post('store', 'store');
             Route::delete('destroy', 'destroy');

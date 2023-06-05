@@ -9,8 +9,11 @@ class Requirement extends Model
 {
     use HasFactory;
 
+    protected $table = 'berkas';
+
     protected $fillable = [
         'user_id',
+        'wedding_id',
         'n1',
         'n2',
         'n3',

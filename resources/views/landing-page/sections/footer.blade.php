@@ -5,7 +5,7 @@
         <div class="row">
             <div class="col-xs-12">
                 <div class="footer-logo">
-                    <p>Sosial Media Kami</p>
+                    <p>Sosial Media Kantor Urusan Agama Delta Pawan</p>
                 </div>
 
                 <div class="social-icon clearfix">
@@ -17,7 +17,7 @@
                 </div>
 
                 <div class="copyright">
-                    <p>Hak Cipta &copy; 2023 Kayong Developer.</p>
+                    <p>Hak Cipta &copy; 2023. <a href="https://kayong-developer.com">Kayong Developer</a></p>
                 </div>
             </div>
         </div>

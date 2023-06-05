@@ -8,8 +8,6 @@
     <form id="form" action="starter/store" method="POST">
         @csrf
         <input type="hidden" name="id" value="{{ empty($married_data->id) ? null : $married_data->id }}">
-        <input type="hidden" name="user_id"
-            value="{{ empty($married_data->user_id) ? Auth::user()->id : $married_data->user_id }}">
         <div class="card">
             <div class="card-body">
                 <p>Tentukan perencanaan pernikahan anda, isi kolom tanggal, waktu dan tempat pelaksanaan akad pernikahan.

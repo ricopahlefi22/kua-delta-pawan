@@ -59,28 +59,28 @@
             <div class="carousel-inner">
 
                 <div class="item active">
-                    <img src="landing-assets/images/slider/slide-1.jpg" alt="First slide" class="img-responsive">
+                    <img src="landing-assets/images/slider/slide-1.jpeg" alt="First slide" class="img-responsive">
                     <div class="carousel-caption">
-                        <h1 class="animated fadeInDown delay-1">We are <span>Creative Studio</span></h1>
-                        <p class="animated fadeInDown delay-3">A digital creative design and development agency </p>
+                        <h1 class="animated fadeInDown delay-1"><span>KUA Delta Pawan</span></h1>
+                        <p class="animated fadeInDown delay-3">Sekarang mendaftar nikah lebih mudah via online</p>
                         <a class="btn learnmore-btn animated fadeInUp delay-4" href="login">Daftar Nikah</a>
                     </div>
                 </div>
 
                 <div class="item">
-                    <img src="landing-assets/images/slider/slide-2.jpg" alt="Second slide" class="img-responsive">
+                    <img src="landing-assets/images/slider/slide-2.jpeg" alt="Second slide" class="img-responsive">
                     <div class="carousel-caption">
-                        <h1 class="animated fadeInDown delay-1"><span>Clean &amp; Modern</span></h1>
-                        <p class="animated fadeInDown delay-3">A simple, unique and beautiful theme! </p>
+                        <h1 class="animated fadeInDown delay-1"><span>KUA Delta Pawan</span></h1>
+                        <p class="animated fadeInDown delay-3">Sekarang mendaftar nikah lebih mudah via online</p>
                         <a class="btn learnmore-btn animated fadeInUp delay-4" href="login">Daftar Nikah</a>
                     </div>
                 </div>
 
                 <div class="item">
-                    <img src="landing-assets/images/slider/slide-3.jpg" alt="Third slide" class="img-responsive">
+                    <img src="landing-assets/images/slider/slide-3.jpeg" alt="Third slide" class="img-responsive">
                     <div class="carousel-caption">
-                        <h1 class="animated fadeInDown delay-1">We <span>Build Brands</span></h1>
-                        <p class="animated fadeInDown delay-3">That builds your Business!</p>
+                        <h1 class="animated fadeInDown delay-1"><span>KUA Delta Pawan</span></h1>
+                        <p class="animated fadeInDown delay-3">Sekarang mendaftar nikah lebih mudah via online</p>
                         <a class="btn learnmore-btn animated fadeInUp delay-4" href="login">Daftar Nikah</a>
                     </div>
                 </div>

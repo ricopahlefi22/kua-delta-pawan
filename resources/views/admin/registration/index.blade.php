@@ -1,13 +1,12 @@
 @extends('admin.template.base')
 
 @section('content')
+    @include('admin.registration.form-modal')
+
     <div class="main">
         <div class="page-header flex justify-content-between">
-            <h4 class="page-title">Tabel Data Pernikahan</h4>
-            <div class="btn-group">
-                <button id="create" class="btn btn-dark"><i class="feather icon-file"></i> Laporan</button>
-                {{-- <button id="create" class="btn btn-primary"><i class="feather icon-plus"></i> Tambah</button> --}}
-            </div>
+            <h4 class="page-title">Tabel Data Pendaftaran</h4>
+            {{-- <button id="create" class="btn btn-primary"><i class="feather icon-plus"></i> Tambah</button> --}}
         </div>
         <div class="card">
             <div class="card-body">
@@ -40,5 +39,5 @@
 @endsection
 
 @push('script')
-    <script type="text/javascript" src="{{ asset('js/wedding-crud.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('js/wedding-registration-crud.js') }}"></script>
 @endpush

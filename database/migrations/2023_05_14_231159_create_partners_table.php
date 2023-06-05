@@ -11,8 +11,13 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('partners', function (Blueprint $table) {
+        // Schema::create('partners', function (Blueprint $table) {
+        Schema::create('pasangan', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('user_id')->nullable();
+            $table->foreign('user_id')->references('id')->on('user');
+            $table->foreignId('wedding_id')->nullable();
+            $table->foreign('wedding_id')->references('id')->on('pernikahan');
             $table->string('photo')->nullable();
             $table->string('ktp')->nullable();
             $table->string('name');
@@ -26,8 +31,6 @@ return new class extends Migration
             $table->string('status')->nullable();
             $table->string('employment')->nullable();
             $table->string('country')->nullable();
-            $table->foreignId('user_id')->nullable();
-            $table->foreign('user_id')->references('id')->on('users');
             $table->timestamps();
         });
     }

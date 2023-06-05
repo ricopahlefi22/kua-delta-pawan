@@ -15,6 +15,9 @@ class UserController extends Controller
         if ($request->ajax()) {
             return DataTables::of(User::all())
                 ->addIndexColumn()
+                ->addColumn('phone_number', function (User $user) {
+                    return empty($user->phone_number) ? '-' : $user->phone_number;
+                })
                 ->addColumn('action', function (User $user) {
                     $btn = '<button data-id="' . $user->id . '"  class="dropdown-item edit"><i class="feather icon-edit"></i> Sunting</button> ';
                     $btn .= '<button data-id="' . $user->id . '" class="dropdown-item delete"><i class="feather icon-trash-2"></i> Hapus</button>';
@@ -22,10 +25,10 @@ class UserController extends Controller
                                 <i class="la font-size-lg la-ellipsis-v"></i>
                             </button>
                             <ul class="dropdown-menu">
-                                '.$btn.'
+                                ' . $btn . '
                             </ul>';
                 })
-                ->rawColumns(['action'])
+                ->rawColumns(['phone_number', 'action'])
                 ->make(true);
         }
 
@@ -92,6 +95,11 @@ class UserController extends Controller
     function destroy(Request $request)
     {
         $data = User::findOrFail($request->id);
+
+        $data->requirement()->delete();
+        $data->partner()->delete();
+        $data->wedding()->delete();
+
         $data->delete();
 
         return response()->json([

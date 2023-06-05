@@ -29,9 +29,9 @@
             <!-- Content START -->
             <div class="content container">
                 <div class="main">
-                    @if (Route::current()->uri != 'u/profile' && Route::current()->uri != 'u/notification')
+                    {{-- @if (Route::current()->uri != 'u/profile' && Route::current()->uri != 'u/notification')
                         @include('user.template.sections.progress-bar')
-                    @endif
+                    @endif --}}
 
                     @yield('content')
                 </div>

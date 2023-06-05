@@ -1,5 +1,5 @@
 @if (!empty(App\Models\Wedding::where('user_id', Auth::user()->id)->first()->date))
-    <div class="text-danger"
+    <div title="Lengkapi Berkas sebelum waktu berakhir!" class="text-danger"
         data-countdown="{{ Carbon\Carbon::parse(App\Models\Wedding::where('user_id', Auth::user()->id)->first()->date)->subDays(2)->format('Y/m/d') }}">
     </div>
 @endif

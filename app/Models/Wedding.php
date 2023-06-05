@@ -9,6 +9,8 @@ class Wedding extends Model
 {
     use HasFactory;
 
+    protected $table = 'pernikahan';
+
     protected $dates = ['date'];
 
     protected $fillable = [
@@ -25,6 +27,10 @@ class Wedding extends Model
     }
 
     public function partner(){
-        return $this->belongsTo(Partner::class, 'partner_id');
+        return $this->hasOne(Partner::class, 'wedding_id');
+    }
+
+    public function requirement(){
+        return $this->hasOne(Requirement::class, 'wedding_id');
     }
 }

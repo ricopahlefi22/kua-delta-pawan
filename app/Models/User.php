@@ -12,12 +12,14 @@ class User extends Authenticatable
 {
     use HasApiTokens, HasFactory, Notifiable;
 
+    protected $table = 'user';
+
     protected $fillable = [
+        'photo',
+        'ktp',
         'name',
         'email',
         'password',
-        'photo',
-        'ktp',
         'id_number',
         'phone_number',
         'birthplace',
@@ -42,5 +44,20 @@ class User extends Authenticatable
     public function socialAccount()
     {
         return $this->hasMany(SocialAccount::class, 'user_id');
+    }
+
+    public function wedding()
+    {
+        return $this->hasOne(Wedding::class, 'user_id');
+    }
+
+    public function partner()
+    {
+        return $this->hasOne(Partner::class, 'user_id');
+    }
+
+    public function requirement()
+    {
+        return $this->hasOne(Requirement::class, 'user_id');
     }
 }

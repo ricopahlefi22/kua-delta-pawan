@@ -45,7 +45,7 @@
                                     <div class="mb-3">
                                         <label class="form-label d-flex justify-content-between">
                                             <span>Kata Sandi</span>
-                                            <a href="#" class="text-primary text-muted font">Lupa kata sandi?</a>
+                                            {{-- <a href="#" class="text-primary text-muted font">Lupa kata sandi?</a> --}}
                                         </label>
                                         <div class="form-group input-affix flex-column">
                                             <input id="password" name="password" class="form-control" type="password">

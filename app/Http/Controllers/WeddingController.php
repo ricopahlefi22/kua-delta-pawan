@@ -14,8 +14,8 @@ class WeddingController extends Controller
         if ($request->ajax()) {
             return DataTables::of(Wedding::where('status', 'complete')->get())
                 ->addIndexColumn()
-                ->addColumn('user', function(Wedding $wedding){
-                    return $wedding->user->name.' & '.$wedding->partner->name;
+                ->addColumn('user', function (Wedding $wedding) {
+                    return empty($wedding->partner->name) ? $wedding->user->name . ' & ?' : $wedding->user->name . ' & ' . $wedding->partner->name;
                 })
                 ->addColumn('action', function (Wedding $wedding) {
                     $btn = '<button data-id="' . $wedding->id . '" class="dropdown-item detail"><i class="la la-info"></i> Info Detail</button>';

@@ -14,13 +14,6 @@
         </div>
         <div class="header-nav-right">
             <div class="header-nav-item">
-                <div class="header-nav-item-select">
-                    <div class="toggle-wrapper" data-bs-toggle="modal" data-bs-target="#quick-view">
-                        <i class="nav-icon feather icon-settings"></i>
-                    </div>
-                </div>
-            </div>
-            <div class="header-nav-item">
                 <div class="dropdown header-nav-item-select nav-profile">
                     <div class="toggle-wrapper" id="nav-profile-dropdown" data-bs-toggle="dropdown">
                         <div class="avatar avatar-circle avatar-image"

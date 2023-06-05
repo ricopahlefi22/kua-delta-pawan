@@ -20,6 +20,7 @@ class RegistrationController extends Controller
     function starter()
     {
         $data['married_data'] = Wedding::where('user_id', Auth::user()->id)->first();
+
         return view('user.starter', $data);
     }
 
@@ -42,7 +43,7 @@ class RegistrationController extends Controller
         Wedding::updateOrCreate([
             'id' => $request->id,
         ], [
-            'user_id' => $request->user_id,
+            'user_id' => Auth::user()->id,
             'date' => $request->married_date,
             'time' => $request->married_time,
             'married_on_office' => $request->married_location_option,
@@ -213,6 +214,7 @@ class RegistrationController extends Controller
             'id' => $request->id,
         ], [
             'user_id' => Auth::user()->id,
+            'wedding_id' => Wedding::where('user_id', Auth::user()->id)->first()->id,
             'name' => ucwords(strtolower($request->name)),
             'id_number' => str_replace(' ', '', $request->id_number),
             'phone_number' => $request->phone_number,
@@ -227,10 +229,6 @@ class RegistrationController extends Controller
             'photo' => $photo,
             'ktp' => $ktp,
         ]);
-
-        $data = Wedding::where('user_id', Auth::user()->id)->first();
-        $data->partner_id = $partner->id;
-        $data->update();
 
         return response()->json([
             'code' => 200,
@@ -479,6 +477,7 @@ class RegistrationController extends Controller
             'id' => $request->id,
         ], [
             'user_id' => Auth::user()->id,
+            'wedding_id' => Wedding::where('user_id', Auth::user()->id)->first()->id,
             'n1' => $n1,
             'n2' => $n2,
             'n3' => $n3,
