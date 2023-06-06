@@ -17,16 +17,16 @@
 
             <ul class="nav navbar-nav navbar-right">
 
-                <li class="active"><a href="/">Beranda</a></li>
-                <li class="dropdown">
+                <li class="{{ Route::current()->uri == '/' ? 'active' : '' }}"><a href="/">Beranda</a></li>
+                <li class="dropdown {{ (Route::current()->uri == 'goal' || Route::current()->uri == 'structure') ? 'active' : '' }}">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">Profil</a>
                     <ul class="dropdown-menu">
-                        <li><a href="contact.html">Visi & Misi</a></li>
-                        <li><a href="typography.html">Struktur Organisasi</a></li>
+                        <li class="{{ Route::current()->uri == 'goal' ? 'active' : '' }}"><a href="goal">Visi & Misi</a></li>
+                        <li class="{{ Route::current()->uri == 'structure' ? 'active' : '' }}"><a href="structure">Struktur Organisasi</a></li>
 
                     </ul>
                 </li>
-                <li><a href="gallery">Galeri</a></li>
+                <li class="{{ Route::current()->uri == 'gallery' ? 'active' : '' }}"><a href="gallery">Galeri</a></li>
             </ul>
         </div>
     </div><!-- /.container -->

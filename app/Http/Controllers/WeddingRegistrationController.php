@@ -19,6 +19,9 @@ class WeddingRegistrationController extends Controller
                 ->addColumn('user', function (Wedding $wedding) {
                     return empty($wedding->partner->name) ? $wedding->user->name . ' & ?' : $wedding->user->name . ' & ' . $wedding->partner->name;
                 })
+                ->addColumn('date', function (Wedding $wedding) {
+                    return Carbon::parse($wedding->date)->isoFormat('D MMMM Y');
+                })
                 ->addColumn('action', function (Wedding $wedding) {
                     $btn = '';
                     if (!empty($wedding->requirement)) {

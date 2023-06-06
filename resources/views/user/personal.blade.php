@@ -264,6 +264,13 @@
 @push('script')
     <script>
         $(document).ready(function() {
+            var Toast = Swal.mixin({
+                toast: true,
+                position: "bottom-end",
+                showConfirmButton: false,
+                timer: 3000,
+            });
+
             $('[data-mask]').inputmask();
 
             $("#photo").on("change", function(e) {
@@ -353,9 +360,16 @@
                         );
                     },
                     success: function(response) {
-                        if (response.code == 200) {
-                            window.location.href = 'partner';
-                        }
+                        Toast.fire({
+                            icon: "success",
+                            title: "Berhasil!\n Data berhasil disimpan.",
+                        });
+
+                        setTimeout(() => {
+                            if (response.code == 200) {
+                                window.location.href = 'partner';
+                            }
+                        }, 2500);
 
                         $("#submit").html("Simpan & Lanjut");
                     },

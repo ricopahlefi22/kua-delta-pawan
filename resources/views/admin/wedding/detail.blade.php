@@ -3,7 +3,8 @@
 @section('content')
     <div class="main">
         <div class="page-header flex justify-content-between">
-            <h4 class="page-title">Verifikasi Data Pernikahan</h4>
+            <h4 class="page-title">Detail Data Pernikahan</h4>
+            <a href="{{ url()->previous() }}" class="btn btn-outline-secondary float-end mx-2"><i class="feather icon-chevron-left"></i> Kembali</a>
         </div>
         <div class="card">
             <div class="card-body">
@@ -456,11 +457,6 @@
                 </div>
             </div>
         </div>
-        <form id="form" action="{{ url('registrations/verification') }}" method="POST">
-            <input type="hidden" name="wedding_id" value="{{ $wedding->id }}">
-            <button id="submit" class="btn btn-success float-end">Verifikasi</button>
-        </form>
-        <a href="{{ url()->previous() }}" class="btn btn-outline-secondary float-end mx-2">Kembali</a>
     </div>
 
     <div class="modal fade" id="userDetailModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -538,46 +534,3 @@
     </div>
 @endsection
 
-@push('script')
-    <script>
-        $(document).ready(function() {
-            $.ajaxSetup({
-                headers: {
-                    "X-CSRF-TOKEN": $('meta[name="csrf-token"]').attr("content"),
-                },
-            });
-
-            $("#form").on('submit', function(e) {
-                e.preventDefault();
-
-                if (confirm('Pastikan berkas sudah lengkap dan benar sebelum memverifikasi. Lanjutkan?')) {
-                    $.ajax({
-                        url: $(this).attr('action'),
-                        method: $(this).attr('method'),
-                        data: new FormData(this),
-                        processData: false,
-                        dataType: "json",
-                        contentType: false,
-                        beforeSend: function() {
-                            $("#submit").html(
-                                '<div class="text-center"><div class="spinner-border spinner-border-sm text-white"></div></div>'
-                            );
-                        },
-                        success: function(response) {
-                            console.log(response);
-
-                            location.reload();
-
-                            $("#submit").html("Verifikasi");
-                        },
-                        error: function(error) {
-                            console.error(error);
-
-                            $("#submit").html("Verifikasi");
-                        }
-                    });
-                }
-            });
-        });
-    </script>
-@endpush

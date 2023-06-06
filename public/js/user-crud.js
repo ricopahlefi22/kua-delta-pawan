@@ -110,9 +110,13 @@ $(document).ready(function () {
         $("#birthday").val("");
         $("#country").val("");
         $("#employment").val("");
+
+        $("#name").removeClass("is-invalid");
+        $("#email").removeClass("is-invalid");
+
         $('input[name="gender"]').val([]);
-        $('input[name="status"]').val([])
-        $('input[name="citizenship"]').val([])
+        $('input[name="status"]').val([]);
+        $('input[name="citizenship"]').val([]);
 
         $("#photo").val("");
         $("#hiddenPhoto").val("");
@@ -145,8 +149,8 @@ $(document).ready(function () {
             dataType: "json",
             contentType: false,
             beforeSend: function () {
-                $("#nameError").html("");
-                $("#emailError").html("");
+                $("#name").removeClass("is-invalid");
+                $("#email").removeClass("is-invalid");
                 $("#button").html(
                     '<div class="text-center"><div class="spinner-border spinner-border-sm text-white"></div> Memproses...</div>'
                 );
@@ -166,16 +170,16 @@ $(document).ready(function () {
 
                 if (error.status == 422) {
                     var responseError = error["responseJSON"]["errors"];
-                    $("#name").addClass("is-invalid");
-                    $("#email").addClass("is-invalid");
                     $("#nameError").html(responseError["name"]);
                     $("#emailError").html(responseError["email"]);
 
                     if (responseError["name"]) {
+                        $("#name").addClass("is-invalid");
                         $("#name").focus();
                     }
 
                     if (responseError["email"]) {
+                        $("#email").addClass("is-invalid");
                         $("#email").focus();
                     }
                 }
@@ -214,7 +218,7 @@ $(document).ready(function () {
                 $("#country").val(response.country);
                 $("#employment").val(response.employment);
                 $('input[name="gender"]').val([response.gender]);
-                $('input[name="status"]').val([response.status])
+                $('input[name="status"]').val([response.status]);
 
                 $('input[name="citizenship"]').val([response.citizenship]);
                 if (response.citizenship != "WNA") {

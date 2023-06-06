@@ -111,6 +111,7 @@ $("#form").on("submit", function (e) {
             });
         },
         error: function (error) {
+            console.log(error);
             $("#button").html("Simpan");
 
             if (error.status == 422) {

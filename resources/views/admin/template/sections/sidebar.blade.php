@@ -52,12 +52,13 @@
                 <span class="nav-menu-item-title">Data Pengguna</span>
             </a>
         </li>
+        @if(Auth::user()->level == 'super')
         <li class="nav-menu-item {{ routeActive('administrators') }}">
             <a href="{{ url('administrators') }}">
                 <i class="la la-user-tie"></i>
                 <span class="nav-menu-item-title">Data Administrator</span>
             </a>
         </li>
-
+        @endif
     </ul>
 </div>

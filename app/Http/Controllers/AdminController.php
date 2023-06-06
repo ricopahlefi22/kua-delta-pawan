@@ -32,7 +32,7 @@ class AdminController extends Controller
         $request->validate(
             [
                 'name' => 'required',
-                'email' => ($request->id) ? 'required|email' : 'required|email|unique:admins',
+                'email' => ($request->id) ? 'required|email' : 'required|email|unique:admin',
             ],
             [
                 'name.required' => 'Mohon isi kolom nama',
@@ -60,6 +60,7 @@ class AdminController extends Controller
             'email' => $request->email,
             'password' => bcrypt('12341234'),
             'photo' => $photo,
+            'level' => 'admin',
         ]);
 
         if ($request->id != $data->id) {

@@ -33,6 +33,12 @@ Route::group(['domain' => 'admin.' . env('DOMAIN')], function () {
             Route::get('dashboard', 'dashboard');
         });
 
+        Route::controller(ProfileController::class)->group(function () {
+            Route::get('profile', 'profileAdmin');
+            Route::post('create-password', 'createPasswordAdmin');
+            Route::post('change-password', 'changePasswordAdmin');
+        });
+
         Route::prefix('administrators')->controller(AdminController::class)->group(function () {
             Route::get('/', 'index');
             Route::post('check', 'check');
@@ -41,20 +47,6 @@ Route::group(['domain' => 'admin.' . env('DOMAIN')], function () {
         });
 
         Route::prefix('users')->controller(UserController::class)->group(function () {
-            Route::get('/', 'index');
-            Route::post('check', 'check');
-            Route::post('store', 'store');
-            Route::delete('destroy', 'destroy');
-        });
-
-        Route::prefix('news')->controller(NewsController::class)->group(function () {
-            Route::get('/', 'index');
-            Route::post('check', 'check');
-            Route::post('store', 'store');
-            Route::delete('destroy', 'destroy');
-        });
-
-        Route::prefix('galleries')->controller(GalleryController::class)->group(function () {
             Route::get('/', 'index');
             Route::post('check', 'check');
             Route::post('store', 'store');
@@ -72,13 +64,8 @@ Route::group(['domain' => 'admin.' . env('DOMAIN')], function () {
 
         Route::prefix('weddings')->controller(WeddingController::class)->group(function () {
             Route::get('/', 'index');
-            Route::post('check', 'check');
-            Route::post('store', 'store');
-            Route::delete('destroy', 'destroy');
-        });
-
-        Route::prefix('schedule')->controller(ScheduleController::class)->group(function () {
-            Route::get('/', 'index');
+            Route::get('detail/{id}', 'detail');
+            Route::get('report', 'report');
             Route::post('check', 'check');
             Route::post('store', 'store');
             Route::delete('destroy', 'destroy');
@@ -88,6 +75,9 @@ Route::group(['domain' => 'admin.' . env('DOMAIN')], function () {
 
 Route::controller(LandingPageController::class)->group(function () {
     Route::get('/', 'index');
+    Route::get('goal', 'goal');
+    Route::get('structure', 'structure');
+    Route::get('gallery', 'gallery');
 });
 
 Route::controller(AuthUserController::class)->group(function () {

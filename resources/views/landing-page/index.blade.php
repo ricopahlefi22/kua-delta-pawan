@@ -54,16 +54,14 @@
     <section id="home">
         <div id="tt-home-carousel" class="carousel slide carousel-fade trendy-slider control-one" data-ride="carousel"
             data-interval="5000">
-
-            <!-- Wrapper for slides -->
             <div class="carousel-inner">
-
                 <div class="item active">
                     <img src="landing-assets/images/slider/slide-1.jpeg" alt="First slide" class="img-responsive">
                     <div class="carousel-caption">
                         <h1 class="animated fadeInDown delay-1"><span>KUA Delta Pawan</span></h1>
                         <p class="animated fadeInDown delay-3">Sekarang mendaftar nikah lebih mudah via online</p>
-                        <a class="btn learnmore-btn animated fadeInUp delay-4" href="login">Daftar Nikah</a>
+                        <a class="btn learnmore-btn animated fadeInUp delay-4" href="{{ url('u/requirements') }}">Daftar
+                            Nikah</a>
                     </div>
                 </div>
 
@@ -72,7 +70,8 @@
                     <div class="carousel-caption">
                         <h1 class="animated fadeInDown delay-1"><span>KUA Delta Pawan</span></h1>
                         <p class="animated fadeInDown delay-3">Sekarang mendaftar nikah lebih mudah via online</p>
-                        <a class="btn learnmore-btn animated fadeInUp delay-4" href="login">Daftar Nikah</a>
+                        <a class="btn learnmore-btn animated fadeInUp delay-4" href="{{ url('u/requirements') }}">Daftar
+                            Nikah</a>
                     </div>
                 </div>
 
@@ -81,7 +80,8 @@
                     <div class="carousel-caption">
                         <h1 class="animated fadeInDown delay-1"><span>KUA Delta Pawan</span></h1>
                         <p class="animated fadeInDown delay-3">Sekarang mendaftar nikah lebih mudah via online</p>
-                        <a class="btn learnmore-btn animated fadeInUp delay-4" href="login">Daftar Nikah</a>
+                        <a class="btn learnmore-btn animated fadeInUp delay-4" href="{{ url('u/requirements') }}">Daftar
+                            Nikah</a>
                     </div>
                 </div>
             </div> <!-- /.carousel-inner -->
@@ -108,49 +108,47 @@
                 <ul class="nav nav-tabs" role="tablist">
                     <li class="active col-xs-3">
                         <a href="#web-design" role="tab" data-toggle="tab">
-                            <i class="flaticon-computer236"></i>
-                            <span>Web Design</span>
+                            <span>Proses Pencatatan Nikah/Rujuk</span>
                         </a>
                     </li>
 
                     <li class="col-xs-3">
                         <a href="#apps-design" role="tab" data-toggle="tab">
-                            <i class="flaticon-technology25"></i>
-                            <span>Apps Design</span>
+                            <span>Alur Pelayanan Nikah</span>
                         </a>
                     </li>
 
                     <li class="col-xs-3">
                         <a href="#game-design" role="tab" data-toggle="tab">
-                            <i class="flaticon-game84"></i>
-                            <span>Game Design</span>
+                            <span>Biaya Pernikahan</span>
                         </a>
                     </li>
 
                     <li class="col-xs-3">
                         <a href="#creative-ideas" role="tab" data-toggle="tab">
-                            <i class="flaticon-light110"></i>
-                            <span>Creative Ideas</span>
+                            <span>Syarat Administrasi Nikah</span>
                         </a>
                     </li>
                 </ul>
                 <!-- Tab panes -->
                 <div class="tab-content">
-                    <!-- tab content for web design -->
                     <div class="row tab-pane fade in active" id="web-design">
                         <div class="col-sm-6">
-                            <h2>Creative web design</h2>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
-                                incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-                                exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
-                                dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-                                Excepteur sint occaecat </p>
-                            <a href="#" class="btn btn-primary"><i class="fa fa-long-arrow-right"></i> Learn
-                                More</a>
+                            <h2>Proses Pencatatan Nikah/Rujuk</h2>
+                            <p>Di dalam negara RI yang berdasarkan hukum, segala sesuatu yang bersangkut paut dengan penduduk harus dicatat, seperti halnya kelahiran, kematian termasuk juga perkawinan.
+                                Perkawinan termasuk erat dengan masalah kewarisan, kekeluargaan sehingga perlu dicatat untuk menjaga agar ada tertib hukum.
+
+                                Pegawai Pencatat Nikah (PPN) mempunyai kedudukan yang jelas dalam peraturan perundang-undangan di Indonesia (UU No.22 Tahun 1946 jo UU No. 32 Tahun 1954) sampai sekarang PPN adalah satu-satunya pejabat yang berwenang mencatat perkawinan yang dilangsungkan menurut hukum agama Islam dalam wilayahnya. Untuk memenuhi ketentuan itu maka setiap perkawinan harus dilangsungkan dihadapan dan dibawah pengawasan PPN karena PPN mempunyai tugas dan kedudukan yang kuat menurut hukum, ia adalah Pegawai Negeri yang diangkat oleh Menteri Agama pada tiap-tiap KUA Kecamatan.
+
+                                Masyarakat dalam merencanakan perkawinan agar melakukan persiapan sebagai berikut :
+                                1. Masing-masing calon mempelai saling mengadakan penelitian apakah mereka saling cinta/setuju dan apakah kedua orang tua mereka menyetujui/merestuinya. Ini erat kaitannya dengan surat-surat persetujuan kedua calon mempelai dan surat izin orang tua bagi yang belum berusia 21 tahun .
+                                2. Masing-masing berusaha meneliti apakah ada halangan perkawinan baik menurut hukum munakahat maupun menurut peraturan perundang-undangan yang berlaku. (Untuk mencegah terjadinya penolakan atau pembatalan perkawinan).
+                                3. Calon mempelai supaya mempelajari ilmu pengetahuan tentang pembinaan rumah tangga hak dan kewajiban suami istri dsb.
+                                4. Dalam rangka meningkatkan kualitas keturunan yang akan dilahirkaan calon mempelai supaya memeriksakan kesehatannya dan kepada calon mempekai wanita diberikan suntikan imunisasi tetanus toxoid.</p>
                         </div>
                         <div class="col-sm-5 col-sm-offset-1">
                             <div class="mac-screenshot">
-                                <img class="img-responsive" src="landing-assets/images/mac.png" alt="">
+                                <img class="img-responsive" src="images/lp-1.jpeg" alt="">
                             </div>
                         </div>
                     </div>
@@ -158,18 +156,30 @@
                     <!-- tab content for application design -->
                     <div class="row tab-pane fade" id="apps-design">
                         <div class="col-sm-6">
-                            <h2>Creative app design</h2>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
-                                incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-                                exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
-                                dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-                                Excepteur sint occaecat </p>
-                            <a href="#" class="btn btn-primary"><i class="fa fa-long-arrow-right"></i> Learn
-                                More</a>
+                            <h2>Alur Pelayanan Nikah</h2>
+                            <p>Untuk memberikan pemahaman dan memastikan tidak ada lagi pungutan biaya (gratifikasi) di luar ketentuan, berikut ini alur pelayanan nikah:
+
+                                1. Calon pengantin mendatangi RT/RW untuk mengurus surat pengantar nikah untuk dibawa ke kelurahan;
+
+                                2. Calon pengantin mendatangi kelurahan untuk mengurus surat pengantar nikah (N1 – N4) untuk dibawa      ke KUA (Kecamatan);
+
+                                 a) Jika pernikahan dilakukan di luar Kecamatan setempat, maka calon pengantin mendatangi KUA(Kecamatan) setempat untuk mengurus surat pengantar rekomendasi nikah untuk dibawa ke KUA (Kecamatan) tempat akad nikah.
+
+                                   b) Jika waktu pernikahan kurang dari 10 hari kerja, maka calon pengantin mendatangi Kantor Kecamatan tempat akad nikah untuk mengurus surat dispensasi nikah.
+
+                                3. Calon pengantin mendatangi Kantor KUA (Kecamatan) tempat akad nikah untuk melakukan pendaftaran nikah;
+
+                                   a) Jika pernikahan dilakukan di KUA (Kecamatan), maka calon pengantin tidak dikenakan biaya alias gratis.
+
+                                    b) Jika perikahan dilakukan di luar KUA (Kecamatan), maka calon pengantin mendatangi Bank Persepsi yang ada di wilayah KUA tempat menikah untuk membayar biaya nikah sebesar Rp600.000,- lalu menyerahkan SLIP SETORANNYA ke KUA tempat akad nikah.
+
+                                4. Calon pengantin mendatangi KUA (Kecamatan) tempat akad nikah untuk melakukan pemeriksaan data nikah calon pengantin dan wali nikah;
+
+                                5. Calon pengantin melaksanakan akad nikah, di KUA (Kecamatan) atau Lokasi Nikah, untuk kemudian diakhiri dengan penyerahan buku nikah.</p>
                         </div>
                         <div class="col-sm-5 col-sm-offset-1">
                             <div class="mac-screenshot">
-                                <img class="img-responsive" src="landing-assets/images/app.png" alt="">
+                                <img class="img-responsive" src="images/lp-2.jpeg" alt="">
                             </div>
                         </div>
                     </div>
@@ -177,18 +187,18 @@
                     <!-- tab content for game design -->
                     <div class="row tab-pane fade" id="game-design">
                         <div class="col-sm-6">
-                            <h2>Creative game design</h2>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
-                                incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-                                exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
-                                dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-                                Excepteur sint occaecat </p>
-                            <a href="#" class="btn btn-primary"><i class="fa fa-long-arrow-right"></i> Learn
-                                More</a>
+                            <h2>Biaya Pernikahan</h2>
+                            <p>Rincian biaya pernikahan yang pertama ini adalah biaya untuk membuat persyaratan nikah di KUA. Biaya ini seringkali terlewat dari catatan anggaran, padahal menjadi hal yang paling penting.
+
+                                Bukannya nikah di KUA itu gratis? Benar, tapi jika pernikahan dilakukan dalam jam atau hari kerja. Hal tersebut tercantum dalam PP Nomor 48 tahun 2014 tentang persyaratan nikah melalui KUA.
+
+                                Nah, jika pernikahan dilakukan di luar jam atau hari kerja, seperti weekend, hari libur nasional dan lainnya, maka akan dikenakan biaya sebesar Rp600 ribu.
+
+                                Biaya ini juga akan dikenakan, jika pasangan melaksanakan pernikahan di masjid, rumah pribadi, atau gedung, meski dilakukan saat jam kerja KUA. </p>
                         </div>
                         <div class="col-sm-5 col-sm-offset-1">
                             <div class="mac-screenshot">
-                                <img class="img-responsive" src="landing-assets/images/game.png" alt="">
+                                <img class="img-responsive" src="images/lp-3.jpeg" alt="">
                             </div>
                         </div>
                     </div>
@@ -196,18 +206,12 @@
                     <!-- tab content for creative idea -->
                     <div class="row tab-pane fade" id="creative-ideas">
                         <div class="col-sm-6">
-                            <h2>Creative Idea</h2>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
-                                incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-                                exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
-                                dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-                                Excepteur sint occaecat </p>
-                            <a href="#" class="btn btn-primary"><i class="fa fa-long-arrow-right"></i> Learn
-                                More</a>
+                            <h2>Syarat Administrasi Nikah</h2>
+                            <p>Persyaratan nikah wajib dipenuhi oleh calon pengantin yang ingin mendaftarkan pernikahannya ke KUA. Prosedur nikah bagi calon suami dan istri sedikit berbeda. Melaksanakan pernikahan dengan lancar dan biaya yang ringan adalah hal yang diinginkan oleh sepasang calon suami dan istri. Hambatan yang sering terjadi saat menikah adalah permasalahan biaya. Namun, permasalahan tersebut seharusnya dapat diatasi oleh calon mempelai. Salah satu hal yang dapat dilakukan adalah menikah di KUA, karena gratis tanpa dipungut biaya. Berdasarkan Peraturan Pemerintah (PP) No 48 Tahun 2014 Tentang Perubahan atas Peraturan Pemerintah Nomor 47 tahun 2004 tentang Tarif Atas Jenis Penerimaan Negara Bukan Pajak Yang Berlaku Pada Departemen Agama (Depag), menikah di KUA tidak dipungut biaya. Peraturan tersebut tentunya menjadi salah satu sarana yang memudahkan dan meringankan calon pasangan dalam melaksanakan pernikahan.</p>
                         </div>
                         <div class="col-sm-5 col-sm-offset-1">
                             <div class="mac-screenshot">
-                                <img class="img-responsive" src="landing-assets/images/idea.png" alt="">
+                                <img class="img-responsive" src="images/lp-4.jpeg" alt="">
                             </div>
                         </div>
                     </div>
@@ -219,7 +223,8 @@
 
     <!-- map-section -->
     <section class="map-section">
-        <iframe frameborder="0" scrolling="no" marginheight="0" marginwidth="0" width="100%" height="250" frameborder="0" style="border:0;" allowfullscreen=""
+        <iframe frameborder="0" scrolling="no" marginheight="0" marginwidth="0" width="100%" height="250"
+            frameborder="0" style="border:0;" allowfullscreen=""
             src="https://maps.google.com/maps?width=600&amp;height=400&amp;hl=en&amp;q=KUA Delta Pawan&amp;t=&amp;z=17&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe>
     </section><!-- /.map-section -->
 

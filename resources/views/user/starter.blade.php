@@ -71,6 +71,13 @@
 @push('script')
     <script>
         $(document).ready(function() {
+            var Toast = Swal.mixin({
+                toast: true,
+                position: "bottom-end",
+                showConfirmButton: false,
+                timer: 3000,
+            });
+
             if ($('input[name="married_location_option"]:checked').val() != 0) {
                 $("#wrapperLocation").html('');
             } else {
@@ -124,9 +131,16 @@
                         );
                     },
                     success: function(response) {
-                        if (response.code == 200) {
-                            window.location.href = 'personal';
-                        }
+                        Toast.fire({
+                            icon: "success",
+                            title: "Berhasil!\n Data berhasil disimpan.",
+                        });
+
+                        setTimeout(() => {
+                            if (response.code == 200) {
+                                window.location.href = 'personal';
+                            }
+                        }, 2500);
 
                         $("#submit").html("Simpan & Lanjut");
                     },

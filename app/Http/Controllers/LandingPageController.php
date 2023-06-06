@@ -12,4 +12,19 @@ class LandingPageController extends Controller
     {
         return view('landing-page.index');
     }
+
+    function goal()
+    {
+        return view('landing-page.goal');
+    }
+
+    function structure()
+    {
+        return view('landing-page.structure');
+    }
+
+    function gallery()
+    {
+        return view('landing-page.gallery');
+    }
 }

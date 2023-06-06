@@ -43,15 +43,14 @@
                                 </div>
                             </div>
                         </div>
-                        <a href="profile" class="dropdown-item">
+                        <a href="{{ url('profile') }}" class="dropdown-item">
                             <div class="d-flex align-items-center">
                                 <i class="font-size-lg me-2 feather icon-user"></i>
                                 <span>Profil</span>
                             </div>
                         </a>
-                        <a href="logout" class="dropdown-item">
-                            <div class="d-flex align-items-center"><i
-                                    class="font-size-lg me-2 feather icon-power"></i>
+                        <a href="{{ url('logout') }}" class="dropdown-item">
+                            <div class="d-flex align-items-center"><i class="font-size-lg me-2 feather icon-power"></i>
                                 <span>Keluar</span>
                             </div>
                         </a>

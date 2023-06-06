@@ -6,7 +6,6 @@ var Toast = Swal.mixin({
 });
 
 var table = $("#table").DataTable({
-    stateSave: true,
     processing: true,
     serverSide: true,
     autoWidth: false,
@@ -87,7 +86,7 @@ $("#create").click(function() {
     $("#photoPreview").attr("src", "");
 });
 
-$("#form").on("submit", function(e) {
+$("#form").on("submit", function (e) {
     e.preventDefault();
 
     $.ajax({
@@ -97,14 +96,14 @@ $("#form").on("submit", function(e) {
         processData: false,
         dataType: "json",
         contentType: false,
-        beforeSend: function() {
+        beforeSend: function () {
             $("#nameError").html("");
             $("#emailError").html("");
             $("#button").html(
                 '<div class="text-center"><div class="spinner-border spinner-border-sm text-white"></div> Memproses...</div>'
             );
         },
-        success: function(response) {
+        success: function (response) {
             table.draw();
             $("#formModal").modal("hide");
 
@@ -113,7 +112,7 @@ $("#form").on("submit", function(e) {
                 title: response.status + "\n" + response.message,
             });
         },
-        error: function(error) {
+        error: function (error) {
             $("#button").html("Simpan");
 
             if (error.status == 422) {
@@ -133,16 +132,17 @@ $("#form").on("submit", function(e) {
     });
 });
 
-$("body").on("click", ".edit", function() {
+$("body").on("click", ".edit", function () {
     $.ajax({
         type: "POST",
         url: document.URL + "/check",
         data: {
             id: $(this).data("id"),
         },
-        success: function(response) {
+        success: function (response) {
+            console.log(response);
             $("#formModal").modal("show");
-            $("#modalTitle").html("Sunting Data");
+            $("#modalTitle").html("Sunting Data Pendaftaran Nikah");
             $("#button").html("Simpan").addClass("btn-warning");
             $("#nameError").html("");
             $("#emailError").html("");
@@ -150,11 +150,20 @@ $("body").on("click", ".edit", function() {
             $("#photoPreview").attr("src", "");
 
             $("#id").val(response.id);
-            $("#name").val(response.name);
-            $("#email").val(response.email);
-            $("#email").prop('readonly', true);
-            $("#hiddenPhoto").val(response.photo);
-            $("#photoPreview").attr("src", response.photo);
+            $("#userId").val(response.user_id);
+            $("#partnerId").val(response.partner_id);
+            $("#date").val(response.date);
+            $("#time").val(response.time);
+            $("#location").val(response.married_address);
+            $("input[name='married_location_option']").val([
+                response.married_on_office,
+            ]);
+
+            if (response.married_on_office == 1) {
+                $("#wrapperLocation").addClass("d-none");
+            } else {
+                $("#wrapperLocation").removeClass("d-none");
+            }
         },
     });
 });

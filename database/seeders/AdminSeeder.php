@@ -14,10 +14,17 @@ class AdminSeeder extends Seeder
     {
         // Admin::factory(10)->create();
 
+        // Admin::factory()->create([
+        //     'name' => 'Rico Pahlefi',
+        //     'email' => 'ricopahlefi22@gmail.com',
+        //     'password' => bcrypt('MudahDitebak22!'),
+        //     'level' => 'super',
+        // ]);
+
         Admin::factory()->create([
-            'name' => 'Rico Pahlefi',
-            'email' => 'ricopahlefi22@gmail.com',
-            'password' => bcrypt('MudahDitebak22!'),
+            'name' => 'Kepala KUA',
+            'email' => 'kepalakua@gmail.com',
+            'password' => bcrypt('12341234'),
             'level' => 'super',
         ]);
 
@@ -30,7 +37,7 @@ class AdminSeeder extends Seeder
 
         Admin::factory()->create([
             'name' => 'Admin KUA',
-            'email' => 'admin@gmail.com',
+            'email' => 'adminkua@gmail.com',
             'password' => bcrypt('12341234'),
             'level' => 'admin',
         ]);
