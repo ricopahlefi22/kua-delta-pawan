@@ -9,7 +9,8 @@
         @csrf
         <div class="card">
             <div class="card-body">
-                <p>Data-data berikut kami butuhkan untuk kelengkapan syarat pendaftaran nikah. kemudian, klik tombol simpan setelelah mengisi formulir.</p>
+                <p>Data-data berikut kami butuhkan untuk kelengkapan syarat pendaftaran nikah. kemudian, klik tombol simpan
+                    setelelah mengisi formulir.</p>
                 <div class="mt-4">
                     <div class="row">
                         <div class="col-md-6">
@@ -171,6 +172,113 @@
                         </div>
                     </div>
                 </div>
+                <hr>
+                {{-- <h6>Data Orangtua</h6>
+                <div class="mt-4">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="mb-2">
+                                <label for="name" class="form-label">Nama Lengkap<span class="text-danger"
+                                        title="Wajib Diisi">*</span></label>
+                                <input id="name" type="text" class="form-control" name="name"
+                                    value="{{ empty($personal_data->name) ? Auth::user()->name : $personal_data->name }}">
+                                <span id="nameError" class="invalid-feedback"></span>
+                            </div>
+                            <div class="mb-2">
+                                <label for="birthplace" class="form-label">Tempat Lahir<span class="text-danger"
+                                        title="Wajib Diisi">*</span></label>
+                                <input id="birthplace" type="text" class="form-control" name="birthplace"
+                                    value="{{ empty($personal_data->birthplace) ? null : $personal_data->birthplace }}">
+                                <span id="birthplaceError" class="invalid-feedback"></span>
+                            </div>
+                            <div class="mb-2">
+                                <label for="employment" class="form-label">Pekerjaan<span class="text-danger"
+                                        title="Wajib Diisi">*</span></label>
+                                <select id="employment" name="employment" class="form-control">
+                                    <option value="" disabled hidden selected>*Pilih Pekerjaan</option>
+                                    <option value="Belum Bekerja"
+                                        @if (!empty($personal_data)) {{ $personal_data->employment == 'Belum Bekerja' ? 'selected' : null }} @endif>
+                                        Belum Bekerja
+                                    </option>
+                                    <option value="Wirausaha"
+                                        @if (!empty($personal_data)) {{ $personal_data->employment == 'Wirausaha' ? 'selected' : null }} @endif>
+                                        Wirausaha
+                                    </option>
+                                    <option value="Nelayan"
+                                        @if (!empty($personal_data)) {{ $personal_data->employment == 'Nelayan' ? 'selected' : null }} @endif>
+                                        Nelayan
+                                    </option>
+                                    <option value="Petani"
+                                        @if (!empty($personal_data)) {{ $personal_data->employment == 'Petani' ? 'selected' : null }} @endif>
+                                        Petani
+                                    </option>
+                                    <option value="TNI/Polri"
+                                        @if (!empty($personal_data)) {{ $personal_data->employment == 'TNI/Polri' ? 'selected' : null }} @endif>
+                                        TNI/Polri
+                                    </option>
+                                    <option value="Pegawai Swasta"
+                                        @if (!empty($personal_data)) {{ $personal_data->employment == 'Pegawai Swasta' ? 'selected' : null }} @endif>
+                                        Pegawai Swasta
+                                    </option>
+                                    <option value="Pegawai Negeri Sipil"
+                                        @if (!empty($personal_data)) {{ $personal_data->employment == 'Pegawai Negeri Sipil' ? 'selected' : null }} @endif>
+                                        Pegawai Negeri Sipil
+                                    </option>
+                                </select>
+                                <span id="employmentError" class="invalid-feedback"></span>
+                            </div>
+                            <div class="mb-2">
+                                <label for="idNumber" class="form-label">Nomor Induk Kependudukan<span
+                                        class="text-danger" title="Wajib Diisi">*</span></label>
+                                <input id="idNumber" class="form-control" name="id_number"
+                                    data-inputmask='"mask": "9999 9999 9999 9999"' data-mask
+                                    value="{{ empty($personal_data->id_number) ? null : $personal_data->id_number }}">
+                                <span id="idNumberError" class="invalid-feedback"></span>
+                            </div>
+                            <div class="mb-2">
+                                <label for="address" class="form-label">Alamat<span class="text-danger"
+                                        title="Wajib Diisi">*</span></label>
+                                <input id="address" type="text" class="form-control" name="address"
+                                    value="{{ empty($personal_data->address) ? null : $personal_data->address }}">
+                                <span id="addressError" class="invalid-feedback"></span>
+                            </div>
+                            <div class="mb-2">
+                                <label for="birthday" class="form-label">Tanggal Lahir<span class="text-danger"
+                                        title="Wajib Diisi">*</span></label>
+                                <input id="birthday" type="date" class="form-control" name="birthday"
+                                    value="{{ empty($personal_data->birthday) ? null : $personal_data->birthday }}">
+                                <span id="birthdayError" class="invalid-feedback"></span>
+                            </div>
+                            <div class="mb-2">
+                                <label class="form-label">Kewarganegaraan<span class="text-danger"
+                                        title="Wajib Diisi">*</span> <span id="citizenshipError"
+                                        class="text-danger"></span></label>
+                                <div class="row">
+                                    <div class="col-3">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" name="citizenship"
+                                                id="wni" value="WNI"
+                                                @if (!empty($personal_data)) {{ $personal_data->citizenship == 'WNI' ? 'checked' : null }} @endif>
+                                            <label class="form-check-label ms-2" for="wni">WNI</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-2">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" name="citizenship"
+                                                id="wna" value="WNA"
+                                                @if (!empty($personal_data)) {{ $personal_data->citizenship == 'WNA' ? 'checked' : null }} @endif>
+                                            <label class="form-check-label ms-2" for="wna">WNA</label>
+                                        </div>
+                                    </div>
+                                    <div id="wrapperCitizenship" class="col-7"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+
+                        </div>
+                    </div>
+                </div> --}}
             </div>
         </div>
         <div class="card">

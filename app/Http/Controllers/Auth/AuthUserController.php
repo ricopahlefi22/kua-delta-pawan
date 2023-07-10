@@ -39,7 +39,7 @@ class AuthUserController extends Controller
                 return response()->json([
                     'code' => 300,
                     'status' => 'Gagal!',
-                    'message' => 'Kami tidak mengenali anda.',
+                    'message' => 'Maaf, kami tidak mengenali anda.',
                 ]);
             }
         } catch (Exception $e) {

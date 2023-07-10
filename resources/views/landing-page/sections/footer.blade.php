@@ -10,7 +10,7 @@
 
                 <div class="social-icon clearfix">
                     <ul class="list-inline">
-                        <li><a href="https://www.facebook.com/people/KUA-Delta-Pawan/100069126613671/"><i class="fa fa-facebook"></i></a></li>
+                        <li><a href="https://www.facebook.com/people/KUA-Delta-Pawan/100069126613671/" target="_blank"><i class="fa fa-facebook"></i></a></li>
                     </ul>
                 </div>
 
