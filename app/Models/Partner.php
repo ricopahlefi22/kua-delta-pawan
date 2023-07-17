@@ -25,6 +25,7 @@ class Partner extends Model
         'address',
         'citizenship',
         'status',
+        'parent_status',
         'employment',
         'country',
     ];

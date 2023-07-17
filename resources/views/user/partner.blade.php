@@ -10,7 +10,8 @@
         <input type="hidden" name="id" value="{{ empty($partner_data->id) ? null : $partner_data->id }}">
         <div class="card">
             <div class="card-body">
-                <p>Data-data berikut kami butuhkan untuk kelengkapan syarat pendaftaran nikah. kemudian, klik tombol simpan setelelah mengisi formulir.</p>
+                <p>Data-data berikut kami butuhkan untuk kelengkapan syarat pendaftaran nikah. kemudian, klik tombol simpan
+                    setelelah mengisi formulir.</p>
                 <div class="mt-4">
                     <div class="row">
                         <div class="col-md-6">
@@ -141,6 +142,21 @@
                                         </div>
                                     </div>
                                 </div>
+                            </div>
+                            <div class="mb-2">
+                                <label for="parentStatus" class="form-label">Status<span class="text-danger"
+                                        title="Wajib Diisi">*</span>
+                                    <span id="parentStatusError" class="text-danger"></span></label>
+                                <select name="parent_status" id="parentStatus" class="form-control">
+                                    <option value="">*Kosongkan Jika Orangtua Lengkap</option>
+                                    <option value="Yatim Piatu"
+                                        @if (!empty($partner_data)) {{ $partner_data->parent_status != 'Yatim Piatu' ? null : 'selected' }} @endif>
+                                        Yatim Piatu (Tidak
+                                        Punya Ayah dan Ibu)</option>
+                                    <option value="Yatim"
+                                        @if (!empty($partner_data)) {{ $partner_data->parent_status != 'Yatim' ? null : 'selected' }} @endif>
+                                        Yatim (Tidak Punya Ayah/Ibu)</option>
+                                </select>
                             </div>
                         </div>
                     </div>

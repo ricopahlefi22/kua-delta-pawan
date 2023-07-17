@@ -27,6 +27,7 @@ return new class extends Migration
             $table->string('address')->nullable();
             $table->string('citizenship')->nullable();
             $table->string('status')->nullable();
+            $table->string('parent_status')->nullable();
             $table->string('employment')->nullable();
             $table->string('country')->nullable();
             $table->timestamps();

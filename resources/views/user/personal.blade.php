@@ -169,6 +169,21 @@
                                     </div>
                                 </div>
                             </div>
+                            <div class="mb-2">
+                                <label for="parentStatus" class="form-label">Status<span class="text-danger"
+                                        title="Wajib Diisi">*</span>
+                                    <span id="parentStatusError" class="text-danger"></span></label>
+                                <select name="parent_status" id="parentStatus" class="form-control">
+                                    <option value="">*Kosongkan Jika Orangtua Lengkap</option>
+                                    <option value="Yatim Piatu"
+                                        {{ $personal_data->parent_status != 'Yatim Piatu' ? null : 'selected' }}>
+                                        Yatim Piatu (Tidak
+                                        Punya Ayah dan Ibu)</option>
+                                    <option value="Yatim"
+                                        {{ $personal_data->parent_status != 'Yatim' ? null : 'selected' }}>
+                                        Yatim (Tidak Punya Ayah/Ibu)</option>
+                                </select>
+                            </div>
                         </div>
                     </div>
                 </div>
